@@ -218,10 +218,10 @@ micro_wake_word:
         condition: media_player.is_playing
         then:
           - media_player.pause
-    #- media_player.play_media: "${wakeup_sound_url}"
-    #- wait_until:
-    #    not:
-    #      media_player.is_playing: onju_out
+    - media_player.play_media: "${wakeup_sound_url}"
+    - wait_until:
+        not:
+          media_player.is_playing: onju_out
     - voice_assistant.start:
         wake_word: !lambda return wake_word;
 
