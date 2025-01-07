@@ -96,9 +96,6 @@ wifi:
 captive_portal:
 
 api:
-  encryption:
-    key: T+oPHELewUX/GDFoh0l/0ttKWoqvLhW4REf6djl65vE=
-    
   services:
     - service: start_va
       then:
