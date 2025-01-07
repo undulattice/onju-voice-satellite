@@ -62,8 +62,8 @@ esp32:
   board: esp32-s3-devkitc-1
   framework:
     type: esp-idf
-    version: 4.4.8
-    platform_version: 5.4.0
+    version: 5.3.1
+    platform_version: 6.9.0
     sdkconfig_options:
       # need to set a s3 compatible board for the adf-sdk to compile
       # board specific code is not used though
@@ -215,7 +215,7 @@ micro_wake_word:
         condition: media_player.is_playing
         then:
           - media_player.pause
-    #- media_player.play_media: "${wakeup_sound_url}"
+    - media_player.play_media: "${wakeup_sound_url}"
     #- wait_until:
     #    not:
     #      media_player.is_playing: onju_out
